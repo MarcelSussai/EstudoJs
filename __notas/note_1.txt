@@ -1,0 +1,18 @@
+________________________________________________________________
+Verificar o necessário para começar um projeto!
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+    Aspectos Estruturais!
+  ――――――――――――――――――――――――――――――――
+    Git
+    Npm (caso seja um projeto node)
+    Decidir quais framewors usar
+    Estrutura de pastas
+  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+  Sobre a pasta __notas!
+  ――――――――――――――――――――――――――――――――
+  Essa pasta deve conter as informações relevantes para:
+    - Anotações gerais sobre desenvolvimento
+    - Anotações sobre o funcionamento do projeto
+    - Anotações sobre como está estruturado
+    - Sobre dicas, aqui estará a pasta com o conteúdo
+  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
