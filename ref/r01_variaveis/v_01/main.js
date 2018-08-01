@@ -1,17 +1,15 @@
-(function(doc, win) {
+(function(doc) {
   'use strict';
-  // * Variáveis teste
-  //______________________________________________________________
-  //――――――――――――――――――――――――――――――――
-  // * Declarando variáveis com var
+  //‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗
+  // * Variáveis
   /*
+  # Declarando variáveis com var
   ? Define uma variável global,
   ? cujo escopo passa aos blocos subjacentes
   ? ou no escopo inteiro de uma função!
+  ! Nomes de variáveis em camelCase de preferência!
   */
-  //――――――――――――――――――――――――――――――――
-  // ! Nomes de variáveis em camelCase de preferência!
-  //――――――――――――――――――――――――――――――――
+  //――――――――――――――――――――――――――――――――→
   // * Tipos de variáveis!
   var a = {};
   var b = "init";
@@ -24,8 +22,7 @@
   const PI = 3.14;
   var a = 1, b = 2, c = a + b;
   let z = 'zzz';
-  //――――――――――――――――――――――――――――――――
-  //――――――――――――――――――――――――――――――――
+  //――――――――――――――――――――――――――――――――→
   console.log('________________________________');
   console.log(a);
   console.log(b);
@@ -39,9 +36,9 @@
   console.log(PI);
   console.log(z);
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
-  //――――――――――――――――――――――――――――――――
-  console.log('________________________________');
-  //――――――――――――――――――――――――――――――――
+  //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
+
+  //‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗
   // * String
   /*
   ? Um texto. Para mostrar que a variável
@@ -50,17 +47,16 @@
   */
   var nome = 'Marcel'; // ? melhor jeito!
   var nomeCompleto = "Marcel Sussai de Oliveira";
+  console.log('________________________________');
   console.log(nome, '-', nomeCompleto);
-  //――――――――――――――――――――――――――――――――
-  //――――――――――――――――――――――――――――――――
+  //――――――――――――――――――――――――――――――――→
   // * Number
   /*
   ? Um número. Números não tem aspas ao redor deles.
   */
   var idade = 32;
   console.log(idade);
-  //――――――――――――――――――――――――――――――――
-  //――――――――――――――――――――――――――――――――
+  //――――――――――――――――――――――――――――――――→
   // * Boolean
   /*
   ? Um valor verdadeiro ou falso!
@@ -71,8 +67,7 @@
   var temMaisDeQuarentaAnos = false;
   console.log(temFilhos);
   console.log(temMaisDeQuarentaAnos);
-  //――――――――――――――――――――――――――――――――
-  //――――――――――――――――――――――――――――――――
+  //――――――――――――――――――――――――――――――――→
   // * Array
   /*
   ? Uma estrutura que permite armazenar vários valores
@@ -81,8 +76,7 @@
   var arr1 = [1, 'Valor dois', 3, false];
   console.log(arr1);
   console.log(arr1[1]);
-  //――――――――――――――――――――――――――――――――
-  //――――――――――――――――――――――――――――――――
+  //――――――――――――――――――――――――――――――――→
   // * Object
   /*
   ? Um objeto é basicamente qualquer coisa
@@ -97,8 +91,7 @@
   };
   console.log(div);
   console.log(obj);
-  //――――――――――――――――――――――――――――――――
-  //――――――――――――――――――――――――――――――――
+  //――――――――――――――――――――――――――――――――→
   // * null
   /*
   ? Uma palavra-chave que indica valor nulo.
@@ -107,7 +100,7 @@
   */
   var nulo = null;
   console.log(nulo);
-  //――――――――――――――――――――――――――――――――
+  //――――――――――――――――――――――――――――――――→
   // * undefined
   /*
   ? Uma propriedade superior cujo valor é indefinido.
@@ -115,7 +108,7 @@
   var indefinido;
   console.log(indefinido);
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
-  //――――――――――――――――――――――――――――――――
+  //――――――――――――――――――――――――――――――――→
   // * Declarando variáveis sem valores, não iniciadas!
   var v1;
   var v2 = 'Valor';
@@ -123,17 +116,14 @@
   var v3, v4;
   v4 = 2018;
   v3 = 10;
-  //――――――――――――――――――――――――――――――――
-  //――――――――――――――――――――――――――――――――
+  //――――――――――――――――――――――――――――――――→
   // * Variável Implicita!
   // //variavelImplicita = 'Javascript';
-  //――――――――――――――――――――――――――――――――
-  //――――――――――――――――――――――――――――――――
+  //――――――――――――――――――――――――――――――――→
   var text1 = v2 + ' ' + v4 + v3;
   var text2 = v4 + v3;
   var text3 = v2 + ' ' + (v4 + v3);
-  //――――――――――――――――――――――――――――――――
-  //――――――――――――――――――――――――――――――――
+  //――――――――――――――――――――――――――――――――→
   console.log('________________________________');
   console.log(v1);
   console.log(' <br> ' + v4 + ' <br> ');
@@ -141,6 +131,5 @@
   console.log(v2, ' ', v4 + ' teste <br> ');
   console.log(text1 + ' <br> ' + text2 + ' <br> ' + text3);
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
-  //――――――――――――――――――――――――――――――――
-  //‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-})(document, window);
+  //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
+})(document);
