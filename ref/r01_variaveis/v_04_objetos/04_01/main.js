@@ -82,5 +82,26 @@
   console.log(myVarFunction);
   console.log(myVarFunction());
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //――――――――――――――――――――――――――――――――→
+  // * Criando funções em objetos que são chamados de métodos!
+  //――――――――――――――――――――――――――――――――→
+  pessoa.aniversario = function() {
+    pessoa.idade++;
+  }
+  pessoa.sobrenome = 'Sussai de Oliveira';
+  pessoa.nomeCompleto = function() {
+    return pessoa.nome + ' ' + pessoa.sobrenome;
+  }
+  //――――――――――――――――――――――――――――――――→
+  console.log('________________________________');
+  console.log(pessoa);
+  console.log('Fazendo andar...');
+  console.log(pessoa.andar());
+  console.log('Idade:', pessoa.idade);
+  console.log('Invocando o aniversario!');
+  pessoa.aniversario();
+  console.log('Idade:', pessoa.idade);
+  console.log('Nome completo:', pessoa.nomeCompleto());
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
 })(document, window);

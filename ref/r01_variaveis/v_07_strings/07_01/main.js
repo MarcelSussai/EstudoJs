@@ -18,6 +18,10 @@
   ?   \uXXXX            unicode codepoint
   ?   \xXX              the Latin-1 character
   */
+  var string1 = 'Essa é uma string';
+  console.log('________________________________');
+  console.log(string1);
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
 
   //‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗
@@ -45,17 +49,41 @@
   var s_obj = new String(s_prim);
   //――――――――――――――――――――――――――――――――→
   console.log('________________________________');
-  console.log(typeof s_prim);       // # string
-  console.log(typeof s_obj);        // # object
+  console.log(typeof s_prim);                     // # string
+  console.log(typeof s_obj);                      // # object
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //――――――――――――――――――――――――――――――――→
   var s1 = '2 + 2';
   var s2 = new String('2 + 2');
   //――――――――――――――――――――――――――――――――→
   console.log('________________________________');
-  console.log(eval(s1));            // # 4
-  console.log(eval(s2));            // # String {"2 + 2"}
-  console.log(eval(s2.valueOf()));  // # 4
+  console.log(eval(s1));                          // # 4
+  console.log(eval(s2));                          // # String {"2 + 2"}
+  console.log(eval(s2.valueOf()));                // # 4
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //――――――――――――――――――――――――――――――――→
+  // * toLowerCase() e toUpperCase()
+  var str2 = 'MARCEL sussai';
+  var newStr2 = str2.charAt(7).toUpperCase() + str2.slice(8);
+  //――――――――――――――――――――――――――――――――→
+  console.log('________________________________');
+  console.log(str2.toLowerCase());                // # marcel sussai
+  console.log(str2.toUpperCase());                // # MARCEL SUSSAI
+  console.log(newStr2);                           // # Sussai
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //――――――――――――――――――――――――――――――――→
+  // * Conversão para string
+  console.log('________________________________');
+  console.log(16 + 2);                            // # 18
+  console.log(String(16) + 2);                    // # 162
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //――――――――――――――――――――――――――――――――→
+  // * trim()
+  // ? remove os espaços no inicio e fim de uma string
+  var str3 = '  teste    teste  ';
+  //――――――――――――――――――――――――――――――――→
+  console.log('________________________________');
+  console.log(str3.trim());
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
 })(document, window);

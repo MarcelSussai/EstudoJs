@@ -32,5 +32,31 @@
   console.log(str1.indexOf('Sussai'));            // # 27
   console.log(str1.lastIndexOf('Sussai'));        // # 27
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //――――――――――――――――――――――――――――――――→
+  // * Localizar valores em um array
+  var arr1 = [1, 2, 3, 4, 5, 6, 8];
+  //――――――――――――――――――――――――――――――――→
+  console.log('________________________________');
+  console.log(arr1.indexOf(1));                   // # 0
+  console.log(arr1.indexOf(9));                   // # -1
+  console.log(arr1.indexOf(3, 2));                // # 2
+  console.log(arr1.indexOf(1, -1));               // # -1
+  console.log(arr1.indexOf(1, -7));               // # 0
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //――――――――――――――――――――――――――――――――→
+  // * Encontrar todas as ocorrências de um elemento
+  var indices =[];
+  var arr2 = ['a', 'b', 'c', 'a', 'd', 'a', 'e'];
+  var elemento = 'a';
+  var indX = arr2.indexOf(elemento);
+  //――――――――――――――――――――――――――――――――→
+  while (indX != -1) {
+    indices.push(indX);
+    indX = arr2.indexOf(elemento, indX + 1);
+  }
+  //――――――――――――――――――――――――――――――――→
+  console.log('________________________________');
+  console.log(indices);                           // # [0, 3, 5]
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
 })(document, window);
