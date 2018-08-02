@@ -117,7 +117,7 @@
   console.log(func1()); // # (3) [1, 2, 3]
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //――――――――――――――――――――――――――――――――→
-  // ? Operador Virgula no retorno de uma função ...
+  // * Operador Virgula no retorno de uma função ...
   var x = 0; // ? para teste de conflito
   function func2() {
     var x = 2;
