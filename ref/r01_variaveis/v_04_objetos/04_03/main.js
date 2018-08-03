@@ -40,4 +40,35 @@
   console.log(revealProps(obj1, 'Outro nome pela variavel'));
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
+
+  //‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗
+  // * Enumerando todas as propriedades de um objeto!
+  // ? for in
+  // ? Object.keys(o)
+  // ? Object.getOwnPropertyNames(o)
+  function listAllProps(o) {
+    var objToInspect;
+    var result = [];
+
+    for(objToInspect = o; objToInspect !== null; objToInspect = Object.getPrototypeOf(objToInspect)) {
+      result = result.concat(Object.getOwnPropertyNames(objToInspect));
+    }
+    return result;
+  }
+  //――――――――――――――――――――――――――――――――→
+  var objTest = {p1: '1', p2: '2'};
+  //――――――――――――――――――――――――――――――――→
+  console.log('________________________________');
+  console.log(listAllProps(objTest));
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
+
+  //‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗
+  // * Usando inicializadores de objetos!
+  var obj3 = { 
+    propriedade_1: 'valor_1',
+    2: str1,
+    "propriedade n": alea
+  }
+  //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
 })(document, window);

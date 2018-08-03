@@ -1,4 +1,4 @@
-(function(doc, win) {
+(function(doc) {
   'use strict';
   
-})(document, window);
+})(document);
