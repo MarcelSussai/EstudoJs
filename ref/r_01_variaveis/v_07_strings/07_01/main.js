@@ -85,5 +85,11 @@
   console.log('________________________________');
   console.log(str3.trim());
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //――――――――――――――――――――――――――――――――→
+  // ? Contando o tamanho da string, a quantidade de caracteres
+  console.log('________________________________');
+  console.log(str1.length);
+  console.log(suss.length);
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
 })(document, window);
