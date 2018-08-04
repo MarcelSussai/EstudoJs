@@ -86,6 +86,7 @@
     b(2)
   }
   //――――――――――――――――→
+  // * Usando objeto de argumentos (arguments)
   function fun3(s) {
     var resu = '';
     for (var i = 1; i < arguments.length; i++) {
@@ -93,13 +94,34 @@
     }
     return resu;
   }
+  //――――――――――――――――→
+  function Fun4() {
+    this.p1 = 'Valor p1';
+    this.este = function() {
+      console.log(this);
+    }
+  }
+  //――――――――――――――――→
+  // ? repare que quando crio funções com propriedades e
+  // ? que serão como objetos eu inicio seu nome com maisculo
+  function Fun5() {
+    // ? guarda a referência ao this:
+    var that = this;
+    this.p1 = 'func5 valor 1';
+    this.este = function() {
+      console.log(that);
+      console.log(this);
+    }
+  }
   //――――――――――――――――――――――――――――――――→
   // ? Pense nisso como:
   // ? Receba uma função que adicionará 3
   // ? ao que quer que você repasse para ela
   var f_dentro = fora(2);
   var resultado1 = f_dentro(6);
-  var resultado2 = fora(2)(6)
+  var resultado2 = fora(2)(6);
+  var k1 = new Fun4();
+  var k2 = new Fun5();
   loop(0);
   //――――――――――――――――――――――――――――――――→
   console.log('________________________________');
@@ -117,6 +139,11 @@
   console.log(fun3(', ', 'teste1', 'teste2', 'teste3'));
   // # teste1, teste2, teste3, teste4, :
   console.log(fun3(', ', 'teste1', 'teste2', 'teste3', 'teste4'));
+  console.log('―――――――――――――――→');
+  k1.este();
+  setTimeout(k1.este, 1000);
+  k2.este();
+  setTimeout(k2.este, 1000);
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
 })(document);
