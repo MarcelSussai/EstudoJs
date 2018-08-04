@@ -1,79 +1,92 @@
 (function(doc) {
   'use strict';
   //‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗
-  // * Arrays
-  // ? Arrays em javascript são objetos disfarçados
-  // ? São uma coleção de valores:
-  var arr01 = ['Sussai', null, function() {}, {cor: 'preta'}, true, 16];
+  // * map()
+  // ? parecido com o forEach()
+  // ? diferente do forEach, map retorna um array!
+  // ? percorrendo tudo e podendo retornar valores!
+  var arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+  var arr2 = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito'];
   //――――――――――――――――――――――――――――――――→
-  console.log('________________________________');
-  console.log(arr01);
-  console.log(arr01[1]);
-  console.log(arr01[3]);
-  console.log(arr01[0]);
-  console.log(arr01[5]);
-  // ? Obtendo o tamanho do array:
-  console.log(arr01.length);
-  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
-  //――――――――――――――――――――――――――――――――→
-  var arr = ['primeiro elemento', 'segundo elemento'];
-  //――――――――――――――――――――――――――――――――→
-  console.log('________________________________');
-  console.log(arr[0]);
-  console.log(arr[1]);
-  console.log(arr[arr.length - 1]);
-  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
-  //――――――――――――――――――――――――――――――――→
-  console.log('________________________________');
-  var qtd01 = arr01.length;
-  while(qtd01 > 0) {
-    console.log(arr01[--qtd01]);
-    qtd01 === 3 ? console.log(arr01[qtd01].cor) : '';
-  }
-  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
-  //――――――――――――――――――――――――――――――――→
-  console.log('________________________________');
-  arr01.forEach(function (ite, ind, arr) {
+  function mapaArr(ite, ind, arr) {
     console.log(ite, ind);
+    console.log(arr);
+    console.log('―――――――――――――――→');
+    // ? retornando um novo array com os itens
+    return ite + 1;
+  }
+  //――――――――――――――――――――――――――――――――→
+  console.log('________________________________');
+  // # (16) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] :
+  console.log(arr1);
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //――――――――――――――――――――――――――――――――→
+  console.log('________________________________');
+  var m1 = arr1.map(mapaArr);
+  console.log(m1);
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //――――――――――――――――――――――――――――――――→
+  console.log('________________________________');
+  var m2 = arr2.map(mapaArr);
+  console.log(m2);
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //――――――――――――――――――――――――――――――――→
+  function obtemM(ite, ind) {
+    return {indice: ind, item: ite};
+  }
+  //――――――――――――――――――――――――――――――――→
+  var m3 = arr1.map(obtemM);
+  var m4 = arr2.map(obtemM);
+  //――――――――――――――――――――――――――――――――→
+  console.log('________________________________');
+  console.log(m3);
+  console.log(m4);
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //――――――――――――――――――――――――――――――――→
+  // * Mapeando um array de números para uma matriz de raízes quadradas!
+  var arr3 = [1, 4, 9];
+  var rts1 = arr3.map(Math.sqrt);
+  //――――――――――――――――――――――――――――――――→
+  console.log('________________________________');
+  console.log(arr3);
+  console.log(rts1);
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //――――――――――――――――――――――――――――――――→
+  // * Usando map para reformatar objetos de um array!
+  var arrObj1 = [ {key: 1, value: 8}, {key: 2, value: 16}, {key: 3, value: 32}];
+  var refcArrObj1 = arrObj1.map(function(o) {
+    var rO = {};
+    rO[o.key] = o.value;
+    return rO;
   });
-  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
-  //――――――――――――――――――――――――――――――――→
-  // * Adicionando item ao final do array:
-  // ? push()
-  var arr02 = [1, 2, 3, 'Marcel', {cor: 'azul'}];
   //――――――――――――――――――――――――――――――――→
   console.log('________________________________');
-  console.log(arr02.length);
-  console.log(arr02[4].cor);
-  arr02.push({prop: 'value/valor'});
-  console.log(arr02[5].prop);
-  console.log(arr02.length);
+  console.log(refcArrObj1);
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //――――――――――――――――――――――――――――――――→
-  var arr03 = [];
-  arr03[0] = 'zero';
-  arr03[1] = 'um';
-  arr03[2] = 'dois';
-  arr03[4] = 'quatro';
+  // * mapeando um array de números usando uma função que contem um argumento
+  function dobrando(n) {
+    return n * 2;
+  }
+  var dobros = arr3.map(dobrando);
   //――――――――――――――――――――――――――――――――→
   console.log('________________________________');
-  console.log(arr03);
-  console.log(arr03[3]);
+  console.log(dobros);
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //――――――――――――――――――――――――――――――――→
-  arr03.push('cinco');
+  // * Usando map() genericamente
+  // ? obtendo de uma string um array de bytes em ASCII
+  // ? ASCII representa os valores de caractere!
+  function codAscii(x) { 
+    return x.charCodeAt(0);
+  }
+  //――――――――――――――――――――――――――――――――→
+  var m5 = Array.prototype.map;
+  var a = m5.call('Olá Mundo!', codAscii);
   //――――――――――――――――――――――――――――――――→
   console.log('________________________________');
-  console.log(arr03);
+  console.log(a);     // # (10) [79, 108, 225, 32, 77, 117, 110, 100, 111, 33]
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //――――――――――――――――――――――――――――――――→
-  // ? remove o ultimo e coloca na variavel
-  var ultimo = arr03.pop();
-  //――――――――――――――――――――――――――――――――→
-  console.log('________________________________');
-  console.log(arr03);
-  console.log('Removeu:', ultimo);
-  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
-
 })(document);

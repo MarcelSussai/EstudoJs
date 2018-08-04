@@ -3,8 +3,8 @@
   //‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗
   // * Object.create()
   // ? utilizando-o para criar herança entre objetos!
-  var obj1 = {x: 1, y: 2};
   // ? Cria um novo objeto herdado, mas NÃO sendo referência
+  var obj1 = {x: 1, y: 2};
   var obj2 = Object.create(obj1);
   //――――――――――――――――――――――――――――――――→
   console.log('________________________________');

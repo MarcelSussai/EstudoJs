@@ -2,7 +2,7 @@
   'use strict';
   //‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗
   // * Tipos de números
-
+  // ? quando não se pode converter a um numero é retornado NaN
   // * Integers (inteiros)
   var intNum01 = 10;
   var intNum02 = 400;
