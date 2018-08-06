@@ -102,6 +102,8 @@
     }
   }
   //――――――――――――――――→
+  // ? HOISTING - pega as funções depois do return
+  // ? e move-as para cima da função pai - elevação
   // ? repare que quando crio funções com propriedades e
   // ? que serão como objetos eu inicio seu nome com maisculo
   function Fun5() {

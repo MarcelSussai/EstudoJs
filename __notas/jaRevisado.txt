@@ -11,3 +11,8 @@ This
 arguments
 CondicionalSwitch
 CondicionalTernario
+FuncoesEProgramaFuncional
+EscopoFuncao
+Debug
+EscopoVariaveis
+Eventos

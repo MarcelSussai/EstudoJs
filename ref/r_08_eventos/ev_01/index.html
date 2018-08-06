@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      margin: 10px auto;
+      width: 88%;
+      border: 1px solid #202020;
+      padding: 10px;
+      background-color: #E0E0E0;
+      color: #202020;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  </style>
+  
+  </head>
+  <body>
+    <div class="container" data-js="div">
+      <h1>Teste 1</h1>
+      <a href="javascript:" onclick="boom()">Boom!</a>
+      <a href="#" data-id="a1">Cabuum!!</a>
+      <a href="#" data-js="link">Link 01 - <span data-js="span">span</span> 
+      </a>
+    </div>
+    <div class="container">
+      <input type="text" data-js="input">
+    </div>
+    <div class="container">
+      <select data-js="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+    <script>
+      var $a = document.querySelector('[data-id="a1"]');
+      $a.addEventListener('click', boom, false);
+      function boom(e) {
+        // e.preventDefault(); // ? previne certos eventos
+        console.log('Boom!!!');
+      }
+    </script>
+    <script src="./main.js"></script>
+  </body>
+</html>
