@@ -54,6 +54,7 @@
   console.log(doc.getElementById('link01'));
   console.log(doc.getElementsByClassName('link-01'));
   console.log(doc.getElementsByTagName('p'));
+  console.log(doc.querySelector(selectors));
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
 })(document, window);

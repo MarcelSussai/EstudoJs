@@ -19,31 +19,31 @@
       color: #202020;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-    a {
-      font-weight: 900;
-    }
+  .dot {
+    height: 8px; width: 8px;
+    border-radius: 4px; /* rounds corners */
+    background: blue;
+    position: absolute;
+  }
   </style>
-  <script>
-    console.log('JS no browser no head!');
-  </script>
+  
   </head>
   <body>
     <div class="container">
-      <p>Saída no console!</p>
-      <script>
-        document.write('escrevendo dentro do elemento!');
-      </script>
+      <p>Saída no console!</p><br>
+      <button>A</button>
+      <button>B</button>
+      <button>C</button>
     </div>
     <div class="container">
-      <p>Links</p>
-      <a class="link-01" id="link01">link 01</a>
-      <a class="link-01" data-js="">link 02</a>
-      <a class="link-01">link 03</a>
-      <a class="link-01">link 04</a>
+      <a href="https://developer.mozilla.org/">MDN</a>
     </div>
-    <script>
-      console.log('No body, no final do html');
-    </script>
+    <div class="container" data-js="dv">
+      <p>Esta parte quando segurar a tecla v ficará verde</p>
+    </div>
+    <div class="container">
+      <p>Precione ctrl + spaço</p>
+    </div>
     <script src="./main.js"></script>
   </body>
 </html>

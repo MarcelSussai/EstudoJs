@@ -23,4 +23,19 @@
   console.log($btn2);
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
+
+  //‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗
+  var $p = doc.querySelector('p');
+  var $btn = doc.querySelector('[data-js="btn"]');
+  //――――――――――――――――――――――――――――――――→
+  $p.addEventListener('click', function() {
+    console.log('Chamada do parágrafo!');
+  });
+  //――――――――――――――――→
+  $btn.addEventListener('click', function(e) {
+    console.log('Chamada do botão!');
+    // ? atenção nisso:
+    e.stopPropagation();
+  });
+  //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
 })(document);

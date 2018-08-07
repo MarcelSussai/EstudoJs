@@ -19,31 +19,16 @@
       color: #202020;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-    a {
-      font-weight: 900;
-    }
   </style>
-  <script>
-    console.log('JS no browser no head!');
-  </script>
+  
   </head>
   <body>
     <div class="container">
-      <p>Saída no console!</p>
-      <script>
-        document.write('escrevendo dentro do elemento!');
-      </script>
+        <p>Drag the bar to change its width:</p>
+        <div style="background: orange; width: 60px; height: 20px"
+          data-js="dv">
+        </div>
     </div>
-    <div class="container">
-      <p>Links</p>
-      <a class="link-01" id="link01">link 01</a>
-      <a class="link-01" data-js="">link 02</a>
-      <a class="link-01">link 03</a>
-      <a class="link-01">link 04</a>
-    </div>
-    <script>
-      console.log('No body, no final do html');
-    </script>
     <script src="./main.js"></script>
   </body>
 </html>

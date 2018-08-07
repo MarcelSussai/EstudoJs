@@ -16,3 +16,4 @@ EscopoFuncao
 Debug
 EscopoVariaveis
 Eventos
+JSnoBrowser
