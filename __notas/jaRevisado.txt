@@ -17,3 +17,10 @@ Debug
 EscopoVariaveis
 Eventos
 JSnoBrowser
+Lacos(loops)
+ParametroRetornoFuncaoArray
+REGEX
+RepeticaoFor
+RepeticaoWhile
+ScriptsInline
+SyncAsync
