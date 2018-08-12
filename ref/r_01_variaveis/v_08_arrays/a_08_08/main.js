@@ -52,4 +52,21 @@
   console.log('O ' + livro + ' foi publicado pela editora ' + book(livro).editora);
   console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
   //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
+
+  //‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗‗
+  var arr03 = [true, {prop: 1}, 3, 'Marcel', [1, 2]];
+  //――――――――――――――――――――――――――――――――→
+  function addItem(item) {
+    arr03.push(item);
+    return arr03;
+  }
+  //――――――――――――――――――――――――――――――――→
+  console.log('________________________________');
+  console.log(addItem([1, 'string', true]));
+  console.log(arr03);
+  console.log('O segundo elemento do segundo array é ' + arr03[5][1]);
+  console.log('O primeiro array tem ' + arr03.length + ' itens');
+  console.log('O segundo array tem ' + arr03[5].length + ' itens');
+  console.log('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾');
+  //˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭˭
 })(document);
