@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exemplo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      margin: 8px auto;
+      width: 88%;
+      border: 1px solid #202020;
+      padding: 8px;
+      background-color: #E0E0E0;
+      color: #202020;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 900;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    .texto {
+      width: 80px;
+      font-size: 12pt;
+      font-weight: 900;
+      color: #00413d;
+      text-align: center;
+    }
+    button {
+      font-size: 12pt;
+      font-weight: 900;
+      color: #06133f;
+    }
+  </style>
+  
+  </head>
+  <body>
+    <div class="container">
+      <h2>Timer</h2>
+    </div>
+    <div class="container">
+      <input class="texto" type="text" data-js="texto" disabled>
+      <button data-js="start">Start!</button>
+      <button data-js="stop">Stop!</button>
+      <button data-js="reset">Reset!</button>  
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

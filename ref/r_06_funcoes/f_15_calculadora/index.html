@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+      <div class="boxContent">
+        <h1>Calculadora!</h1>
+        <!-- 1- input -->
+        <input  class="internoInp"        type="text"
+                value="0"                 readonly
+                data-js="visor">
+        <!-- 1- input -->
+        <!-- 2- Numeros -->
+        <button class="internoBtn green"    type="button"
+                data-id="btnOperatorEqual"  value="=">=
+        </button>
+        <button class="internoBtn"        type="button" 
+                data-js="btnNumber"       value="1">1
+        </button>
+        <button class="internoBtn"        type="button" 
+                data-js="btnNumber"       value="2">2
+        </button>
+        <button class="internoBtn"        type="button" 
+                data-js="btnNumber"       value="3">3
+        </button>
+        <button class="internoBtn"        type="button" 
+                data-js="btnNumber"       value="4">4
+        </button>
+        <button class="internoBtn"        type="button" 
+                data-js="btnNumber"       value="5">5
+        </button>
+        <button class="internoBtn"        type="button" 
+                data-js="btnNumber"       value="6">6
+        </button>
+        <button class="internoBtn"        type="button" 
+                data-js="btnNumber"       value="7">7
+        </button>
+        <button class="internoBtn"        type="button" 
+                data-js="btnNumber"       value="8">8
+        </button>
+        <button class="internoBtn"        type="button" 
+                data-js="btnNumber"       value="9">9
+        </button>
+        <button class="internoBtn"        type="button" 
+                data-js="btnNumber"       value="0">0
+        </button>
+        <!-- 2- Numeros -->
+        <!-- 3- Operadores -->
+        <button class="internoBtn blue"   type="button"
+                data-js="btnOperator"     value="-">-
+        </button>
+        <button class="internoBtn red"    type="button"
+                data-id="btnOperatorCE"   value="CE">CE
+        </button>
+        <button class="internoBtn blue"   type="button"
+                data-js="btnOperator"     value="÷">÷
+        </button>
+        <button class="internoBtn blue"   type="button"
+                data-js="btnOperator"     value="+">+
+        </button>
+        <button class="internoBtn blue"   type="button"
+                data-js="btnOperator"     value="×">×
+        </button>
+        <!-- 3- Operadores -->
+      </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
